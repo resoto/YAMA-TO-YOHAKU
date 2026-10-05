@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PostList from '../components/PostList.astro';
+import Mark from '../components/Mark.astro';
+import { photos } from '../config';
+---
+<Layout>
+  <section class="hero shell-wide" aria-labelledby="hero-heading">
+    <img class="hero-image" src={photos.lake.src} alt={photos.lake.alt} width="2200" height="1200" fetchpriority="high" />
+    <div class="hero-shade"></div>
+    <div class="hero-content"><div class="hero-kicker"><span></span> A JOURNAL OF MOUNTAINS & EVERYDAY LIFE</div><h1 id="hero-heading">山へ行こう。<br />余白を、見つけに。</h1><p>風の音。土の匂い。稜線の向こうの景色。<br />いつもの日常を少し離れて、<br class="mobile-only" />心がほどける山の時間へ。</p><a class="hero-button" href="/blog/">山の記録を読む <span aria-hidden="true">＋</span></a></div>
+    <div class="hero-stamp"><Mark /><span>ONE STEP<br />CLOSER TO NATURE</span></div>
+    <div class="hero-bottom"><span><span class="tiny-cross">＋</span> TATEYAMA, JAPAN<span class="hero-place">立山・みくりが池</span></span><a href="/about/#photo-credits">PHOTO: RAITA FUTO</a></div>
+  </section>
+  <div class="intro-line shell"><p>遠くへ行くより、<span>深く息をするために。</span></p><span>WALK SLOWLY. FEEL MORE.</span></div>
+  <PostList home limit={3} />
+  <section class="about-strip shell" aria-labelledby="about-heading"><div class="about-photo"><img src={photos.forest.src} alt={photos.forest.alt} width="1000" height="780" loading="lazy" /><span>LESS NOISE, MORE NATURE.</span></div><div class="about-copy"><span class="eyebrow">ABOUT THIS JOURNAL</span><h2 id="about-heading">山を歩くと、<br />日常が少し変わる。</h2><p>頂上を目指す日も、森の中で立ち止まる日も。<br />山には、それぞれの楽しみ方がある。</p><p>「山と、余白。」は、山歩きの記録と道具のこと、<br class="desktop-only" />自然のなかで見つけた小さな発見を綴る場所です。</p><a class="text-link" href="/about/">このブログについて <span class="link-plus" aria-hidden="true">＋</span></a></div></section>
+  <div class="closing-line shell"><span>SEE YOU ON THE TRAIL.</span><span>また、山で。</span><Mark /></div>
+</Layout>

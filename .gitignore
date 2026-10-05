@@ -1,0 +1,10 @@
+node_modules/
+.pnpm-store/
+dist/
+.astro/
+.asset-work/
+.wrangler/
+.env
+.env.*
+!.env.example
+*.log
